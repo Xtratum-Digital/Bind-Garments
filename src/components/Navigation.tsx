@@ -15,11 +15,11 @@ export default function Navigation() {
             zIndex: 1000,
             border: '1px solid rgba(255, 255, 255, 0.1)'
         }}>
-            <Link href="/" style={{ color: 'var(--text-main)', textDecoration: 'none', fontWeight: 'bold' }}>Bind</Link>
-            <Link href="/about" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>About</Link>
-            <Link href="/services" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Services</Link>
-            <Link href="/products" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Products</Link>
-            <Link href="/contact" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Contact</Link>
+            <Link href="/" style={{ color: 'var(--text-main)', textDecoration: 'none', fontWeight: 'bold' }}>HOME</Link>
+            <Link href="/about" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>ABOUT</Link>
+            <Link href="/products" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>PRODUCTS</Link>
+            <Link href="/services" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>SERVICES</Link>
+            <Link href="/contact" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>CONTACT</Link>
         </nav>
     );
 }
