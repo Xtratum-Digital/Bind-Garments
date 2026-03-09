@@ -97,6 +97,21 @@ export default function ContactUs() {
                         </button>
                     </div>
                 </form>
+
+                {/* Map Integration */}
+                <div className="mt-16 overflow-hidden rounded-2xl shadow-lg border border-accent/10">
+                    <iframe
+                        title="QASR ALFALAH UNIFORMS Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.581297587784!2d55.44948437596164!3d25.312384725942487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f7823e59073%3A0x6291a56e01a54554!2sQasr%20Al%20Falah%20Uniforms!5e0!3m2!1sen!2sae!4v1710000000000!5m2!1sen!2sae"
+                        width="100%"
+                        height="450"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+
                 <div className="mt-16 pt-12 border-t border-accent/20 text-center">
                     <div className="flex flex-col items-center gap-4 text-primary">
                         <p className="text-xl font-bold">Ajman</p>

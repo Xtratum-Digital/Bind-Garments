@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
     const [isRTL, setIsRTL] = useState(false);
@@ -8,34 +9,40 @@ export default function Navbar() {
         document.documentElement.dir = isRTL ? "rtl" : "ltr";
     }, [isRTL]);
 
-    const navLinks = ["Home", "About Us", "Our Services", "Contact Us"];
+    const navLinks = [
+        { name: "Home", href: "/" },
+        { name: "Our Services", href: "/services" },
+        { name: "Products", href: "/products" },
+        { name: "About Us", href: "/about" },
+        { name: "Contact Us", href: "/contact" }
+    ];
 
     return (
         <header className="sticky top-0 z-50 bg-bg-light/95 backdrop-blur-sm border-b border-accent/30 shadow-[0_4px_20px_rgb(186,168,128,0.1)] transition-all">
             <div className="container mx-auto px-6 h-20 flex items-center justify-between">
 
                 {/* Brand Logo */}
-                <div className="flex items-center gap-2">
+                <Link href="/" className="flex items-center gap-2 cursor-pointer no-underline">
                     <svg className="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
                     <span className="text-2xl font-bold text-primary tracking-tight">
                         QASR ALFALAH UNIFORMS TAILORING
                     </span>
-                </div>
+                </Link>
 
                 {/* Navigation Links */}
                 <nav className="hidden lg:flex items-center gap-8">
                     {navLinks.map((link) => (
-                        <a
-                            key={link}
-                            href={`#${link.toLowerCase().replace(" ", "-")}`}
-                            className="relative text-primary font-semibold group py-2"
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="relative text-primary font-semibold group py-2 no-underline"
                         >
-                            <span className="group-hover:text-accent transition-colors duration-300">{link}</span>
+                            <span className="group-hover:text-accent transition-colors duration-300">{link.name}</span>
                             {/* Elegant hover animation: Expanding underline from center */}
                             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
