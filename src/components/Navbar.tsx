@@ -10,6 +10,7 @@ const cinzel = Cinzel({
 
 export default function Navbar() {
     const [isRTL, setIsRTL] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         document.documentElement.dir = isRTL ? "rtl" : "ltr";
@@ -39,7 +40,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Navigation Links */}
-                <nav className="hidden lg:flex items-center gap-8">
+                <nav className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -48,6 +49,40 @@ export default function Navbar() {
                         >
                             <span>{link.name}</span>
                             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+                        </Link>
+                    ))}
+                </nav>
+
+                {/* Mobile Menu Toggle Button */}
+                <button
+                    className="md:hidden text-white hover:text-accent focus:outline-none transition-colors duration-300"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Toggle menu"
+                >
+                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        {isMobileMenuOpen ? (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        ) : (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                        )}
+                    </svg>
+                </button>
+            </div>
+
+            {/* Mobile Menu */}
+            <div
+                className={`md:hidden absolute top-full left-0 w-full bg-primary/95 backdrop-blur-md transition-all duration-300 overflow-hidden z-40 ${isMobileMenuOpen ? "max-h-72 opacity-100 py-6 shadow-lg border-t border-accent/20" : "max-h-0 opacity-0 py-0"
+                    }`}
+            >
+                <nav className="flex flex-col items-center gap-6">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`text-white hover:text-accent font tracking-wide text-lg transition-colors duration-300 ${cinzel.className}`}
+                        >
+                            {link.name}
                         </Link>
                     ))}
                 </nav>
