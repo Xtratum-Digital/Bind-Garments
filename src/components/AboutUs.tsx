@@ -1,5 +1,15 @@
 import React from "react";
+import { Cinzel, Lato } from "next/font/google";
 
+const cinzel = Cinzel({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const lato = Lato({
+    subsets: ["latin"],
+    weight: ["100", "300", "400", "700", "900"],
+});
 export default function AboutUs() {
     return (
         <section className="py-24 bg-bg-light overflow-hidden">
@@ -10,7 +20,7 @@ export default function AboutUs() {
                     <span className="inline-block py-1 px-3 rounded-full bg-accent/20 text-accent font-bold text-sm tracking-widest mb-4 uppercase">
                         Vision & Mission
                     </span>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-primary leading-tight mb-8 uppercase">
+                    <h2 className={`text-4xl lg:text-5xl ${cinzel.className} font-bold text-primary leading-tight mb-8 uppercase`}>
                         Our Vision
                     </h2>
                     <div className="space-y-6 text-lg text-primary/80">
@@ -19,7 +29,7 @@ export default function AboutUs() {
                         </p>
                     </div>
 
-                    <h2 className="text-4xl lg:text-5xl font-bold text-primary leading-tight mb-8 mt-12 uppercase">
+                    <h2 className={`text-4xl lg:text-5xl ${cinzel.className} font-bold text-primary leading-tight mb-8 mt-12 uppercase`}>
                         Our Mission
                     </h2>
                     <div className="space-y-6 text-lg text-primary/80">

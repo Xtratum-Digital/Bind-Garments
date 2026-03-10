@@ -1,5 +1,10 @@
 import React from "react";
+import { Cinzel } from "next/font/google";
 
+const cinzel = Cinzel({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800", "900"],
+});
 export default function Products() {
     const categories = [
         {
@@ -71,7 +76,7 @@ export default function Products() {
         <section id="our-products" className="py-24 bg-white relative">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6 uppercase">Our Products</h2>
+                    <h2 className={`text-4xl lg:text-5xl ${cinzel.className} font-bold text-primary mb-6 uppercase`}>Our Products</h2>
                     <p className="text-lg text-primary/75">
                         We provide specialized uniform solutions and high-quality apparel tailored to the unique operational demands of diverse sectors.
                     </p>

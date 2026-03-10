@@ -1,39 +1,66 @@
 import React from "react";
+import { Cinzel, Lato } from "next/font/google";
+
+const cinzel = Cinzel({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const lato = Lato({
+    subsets: ["latin"],
+    weight: ["100", "300", "400", "700", "900"],
+});
 
 export default function Hero() {
     return (
-        <section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden bg-bg-light py-20 lg:py-0">
-            <div className="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-12">
-                {/* Text Content */}
-                <div className="flex-1 text-center lg:text-start z-10 lg:pe-12">
-                    <span className="inline-block py-1 px-3 rounded-full bg-accent/20 text-accent font-bold text-sm tracking-wider mb-6 uppercase">
-                        Premium Craftsmanship
-                    </span>
-                    <h1 className="text-5xl lg:text-7xl font-bold text-primary leading-tight mb-6 tracking-tight">
-                        QASR ALFALAH UNIFORMS TAILORING
-                    </h1>
-                    <p className="text-lg lg:text-xl text-primary/80 mb-10 max-w-2xl mx-auto lg:mx-0">
-                        We Establish Extraordinary Connections!
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <button className="px-8 py-4 bg-accent text-primary font-bold rounded-md hover:bg-accent/90 transition-all shadow-[0_4px_14px_0_rgba(186,168,128,0.39)] hover:shadow-[0_6px_20px_rgba(186,168,128,0.23)] hover:-translate-y-1 transform">
-                            Request a Quote
-                        </button>
-                        <button className="px-8 py-4 border-2 border-primary text-primary font-bold rounded-md hover:bg-primary hover:text-bg-light transition-all">
-                            Our Catalog
-                        </button>
-                    </div>
+        <section className={`relative h-screen w-full overflow-hidden bg-primary ${lato.className}`}>
+            {/* Background Image with Dark Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/hero/hero_light.png"
+                    alt="Premium Fabric Texture"
+                    className="w-full h-full object-cover opacity-70 mix-blend-multiply"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/100 via-primary/60 to-transparent pointer-events-none"></div>
+            </div>
+
+            {/* Content Container */}
+            <div className="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-start text-left">
+
+                {/* Gold Sparkle Decoration (Top Left) */}
+                <div className="absolute top-34 left-75 text-accent/40 animate-pulse hidden lg:block">
+                    <svg className="w-12 h-12 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+                    </svg>
                 </div>
 
-                {/* Image Placeholder */}
-                <div className="flex-1 relative w-full h-[400px] lg:h-[650px] rounded-2xl overflow-hidden shadow-2xl group">
-                    <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-all duration-500 z-10 pointer-events-none"></div>
-                    {/* Using a placeholder online image for the stitching/tailoring aesthetic */}
-                    <img
-                        src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                        alt="Corporate Uniform Tailoring"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                {/* Premium Badge */}
+                <div className="mb-8 transform translate-y-0 opacity-100 transition-all duration-1000 delay-300">
+                    <span className="inline-block py-2 px-5 rounded-full border border-accent/40 bg-accent/10 text-accent font-bold text-xs tracking-[0.2em] uppercase backdrop-blur-sm shadow-[0_0_15px_rgba(186,168,128,0.2)]">
+                        Premium Craftsmanship
+                    </span>
+                </div>
+
+                {/* Main Hero Title - cinzel font */}
+                <h1 className={`max-w-4xl text-5xl md:text-7xl lg:text-[5.5rem] ${cinzel.className} font-medium text-accent leading-[1.1] tracking-tight mb-8 transform translate-y-0 opacity-100 transition-all duration-1000 delay-500 drop-shadow-xl`}>
+                    QASR ALFALAH<br />
+                    UNIFORMS<br />
+                    TAILORING
+                </h1>
+
+                {/* Subtext - Lato font */}
+                <p className="text-xl md:text-2xl font-light text-bg-light/90 max-w-2xl mb-12 transform translate-y-0 opacity-100 transition-all duration-1000 delay-700 drop-shadow-md">
+                    We Establish Extraordinary Connections!
+                </p>
+
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-5 transform translate-y-0 opacity-100 transition-all duration-1000 delay-900">
+                    <button className="px-8 py-3.5 bg-accent text-primary font-bold text-sm tracking-widest hover:bg-accent/90 transition-all shadow-[0_4px_14px_0_rgba(186,168,128,0.39)] uppercase rounded-sm">
+                        Request a Quote
+                    </button>
+                    <button className="px-8 py-3.5 bg-transparent border border-bg-light/60 text-bg-light font-bold text-sm tracking-widest hover:bg-bg-light/10 transition-all uppercase rounded-sm backdrop-blur-sm">
+                        Our Catalog
+                    </button>
                 </div>
             </div>
         </section>

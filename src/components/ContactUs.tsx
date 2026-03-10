@@ -1,5 +1,15 @@
 import React from "react";
+import { Cinzel, Lato } from "next/font/google";
 
+const cinzel = Cinzel({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const lato = Lato({
+    subsets: ["latin"],
+    weight: ["100", "300", "400", "700", "900"],
+});
 export default function ContactUs() {
     return (
         <section id="contact-us" className="py-24 bg-white">
@@ -12,7 +22,7 @@ export default function ContactUs() {
                         <span className="text-accent font-bold uppercase tracking-widest text-sm">Contact Us</span>
                         <div className="h-px bg-accent w-12 sm:w-24"></div>
                     </div>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-primary">
+                    <h2 className={`text-4xl lg:text-5xl ${cinzel.className} font-bold text-primary`}>
                         Get In Touch With Us
                     </h2>
                 </div>
