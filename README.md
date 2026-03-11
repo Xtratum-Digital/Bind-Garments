@@ -1,8 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bind Garments
+
+Welcome to the official repository for **Bind Garments**, a premium uniform stitching and manufacturing company. This project is a modern, responsive, and highly aesthetic web application built to showcase our tailored uniform solutions, services, and commitment to quality.
+
+## Overview
+
+Bind Garments offers bespoke uniform solutions for various industries. This corporate website serves as the digital storefront for the business, highlighting our expertise, product categories, and seamless contact options for inquiries. The application features a premium aesthetic with specialized typography, custom color palettes, and interactive UI components.
+
+## Pages & Structure
+
+The application is structured into the following key pages:
+
+- **Home (`/`)**: A dynamic landing page featuring a Hero section, Trust bar, Services overview, and a teaser for other sections.
+- **About Us (`/about-us` | `/about`)**: Company vision, mission, and detailed background about Bind Garments.
+- **Our Products (`/our-products` | `/products`)**: A showcase of the different uniform categories and custom apparel we provide.
+- **Services (`/services`)**: Information regarding our bespoke stitching, bulk manufacturing, and delivery services.
+- **Contact Us (`/contact-us` | `/contact`)**: A comprehensive inquiry form and contact details (including WhatsApp integration and location) to easily reach out to our team.
+
+## Tech Stack
+
+This project is built using modern web development practices and tools:
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Linting**: ESLint
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory:
+   ```bash
+   cd bespoke-uniforms
+   ```
+3. Install the dependencies using npm, yarn, pnpm, or bun:
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+### Running the Development Server
+
+Start the development server with the following command:
 
 ```bash
 npm run dev
@@ -14,23 +64,15 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. The application will auto-update as you edit the files in the `src/app` directory.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app`: Contains all Next.js App Router pages and layouts.
+- `src/components`: Contains reusable UI components like the Navbar, Footer, and Section blocks.
+- `public`: Contains static assets like images, icons, and fonts.
+- `tailwind.config.ts` / `postcss.config.mjs`: Configuration files for styling and Tailwind integration.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is proprietary to Bind Garments. All rights reserved.
