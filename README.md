@@ -1,10 +1,10 @@
 # Bind Garments
 
-Welcome to the official repository for **Bind Garments**, a premium uniform stitching and manufacturing company. This project is a modern, responsive, and highly aesthetic web application built to showcase our tailored uniform solutions, services, and commitment to quality.
+Welcome to the official repository for **Bind Garments**, a premium uniform stitching and manufacturing company. This project is a modern, responsive, and highly aesthetic web application built to showcase tailored uniform solutions, services, and commitment to quality.
 
 ## Overview
 
-Bind Garments offers bespoke uniform solutions for various industries. This corporate website serves as the digital storefront for the business, highlighting our expertise, product categories, and seamless contact options for inquiries. The application features a premium aesthetic with specialized typography, custom color palettes, and interactive UI components.
+Bind Garments offers uniform solutions for various industries. This corporate website serves as the digital storefront for the business, highlighting expertise, product categories, and seamless contact options for inquiries. The application features a premium aesthetic with specialized typography, custom color palettes, and interactive UI components.
 
 ## Pages & Structure
 
@@ -12,9 +12,9 @@ The application is structured into the following key pages:
 
 - **Home (`/`)**: A dynamic landing page featuring a Hero section, Trust bar, Services overview, and a teaser for other sections.
 - **About Us (`/about-us` | `/about`)**: Company vision, mission, and detailed background about Bind Garments.
-- **Our Products (`/our-products` | `/products`)**: A showcase of the different uniform categories and custom apparel we provide.
-- **Services (`/services`)**: Information regarding our bespoke stitching, bulk manufacturing, and delivery services.
-- **Contact Us (`/contact-us` | `/contact`)**: A comprehensive inquiry form and contact details (including WhatsApp integration and location) to easily reach out to our team.
+- **Our Products (`/our-products` | `/products`)**: A showcase of the different uniform categories and custom apparel they provide.
+- **Services (`/services`)**: Information regarding stitching, bulk manufacturing, and delivery services.
+- **Contact Us (`/contact-us` | `/contact`)**: A comprehensive inquiry form and contact details (including WhatsApp integration and location) to easily reach out to the team.
 
 ## Tech Stack
 
